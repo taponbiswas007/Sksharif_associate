@@ -103,4 +103,34 @@
     });
     
 })(jQuery);
+// toggle menu style
+Array.from(document.getElementsByTagName('path')).map(path => {
+    console.log(path.getTotalLength());
+    const debugPath = path.cloneNode();
+    debugPath.classList.add('line--debug');
+    if (path.parentNode) path.parentNode.insertBefore(debugPath.cloneNode(), path);
+  });
+  
+  const debugCheckbox = document.getElementById('debug');
+  debugCheckbox.addEventListener('change', () => {
+    const navElement = document.querySelector('.navDeactive'); // Select the .navDeactive element
+    if (debugCheckbox.checked) {
+      navElement.classList.add('navActive'); // Add 'navActive' when checked
+    } else {
+      navElement.classList.remove('navActive'); // Remove 'navActive' when unchecked
+    }
+  });
+  
+  let currentActive = 0;
+  const checkboxes = document.querySelectorAll('.grid input');
+  const autoShow = setInterval(() => {
+    checkboxes[currentActive % checkboxes.length].checked = !checkboxes[currentActive % checkboxes.length].checked;
+    if (!checkboxes[currentActive % checkboxes.length].checked) currentActive += 1;
+  }, 1000);
+  
+  document.querySelector('.grid').addEventListener('click', () => {
+    clearInterval(autoShow);
+  });
+ 
+  
 
