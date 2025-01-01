@@ -179,6 +179,11 @@ body {
 header {
   background: #000000;
   padding: 10px 0;
+  position: sticky;
+  top: -100px;
+  left: 0;
+  z-index: 99;
+  transition: all 0.5s ease-in;
 }
 header .topbar {
   padding-bottom: 7px;
@@ -211,6 +216,7 @@ header .border_line {
   overflow: hidden;
   white-space: nowrap;
   font-weight: 600;
+  
   background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%) !important;
 }
 header nav {
@@ -315,7 +321,7 @@ header nav .contact {
     top: 100%;
     left: -100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: #000000;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -454,10 +460,30 @@ header nav .contact {
     display: block;
   }
 }
+@media (max-width:488px) {
+    header .topbar h1{
+        line-height: 41px;
+    }
+    header .topbar h2{
+        margin-top: 0;
+    }
+    header{
+        top: -135px;
+    }
+}
+@media (max-width:405px) {
+  
+    header{
+        top: -150px;
+    }
+}
 
 /*******************************/
 /******** Carousel CSS *********/
 /*******************************/
+#carousel{
+    margin-top: 0 !important;
+}
 .carousel {
     position: relative;
     width: 100%;
