@@ -78,6 +78,7 @@ video {
 
 body {
     line-height: 1;
+    font-family: "Open Sans", serif;
 }
 
 article,
@@ -1062,7 +1063,7 @@ header nav .contact {
 }
 
 .card-content {
-    padding: 20px;
+    padding: 17px;
     color: #eee;
 }
 
@@ -1076,7 +1077,7 @@ header nav .contact {
 }
 
 .card-description {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 1.4;
     margin-bottom: 20px;
     color: #ddd;
@@ -1187,6 +1188,7 @@ header nav .contact {
     position: relative;
     width: 100%;
     padding: 45px 0;
+    background: #ffffff;
 }
 
 .feature .feature-item {
@@ -1238,6 +1240,8 @@ header nav .contact {
 .feature .feature-item p {
     margin: 0;
     font-size: 16px;
+    line-height: 20px;
+   
 }
 
 .feature .feature-img {
