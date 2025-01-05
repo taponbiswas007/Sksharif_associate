@@ -953,6 +953,7 @@ header nav .contact {
     object-fit: cover;
     border-radius: 10px 10px 0 0;
 }
+
 .about .about-img .owner_informatiom {
     width: 100%;
     position: absolute;
@@ -964,30 +965,34 @@ header nav .contact {
     z-index: 1;
     padding: 10px;
 }
+
 .about .about-img .owner_informatiom h1 {
     font-size: 15px;
     font-family: "Open Sans", serif;
     text-align: center;
     font-weight: 600;
-    line-height:18px ;
+    line-height: 18px;
     color: #ffffff;
 }
+
 .about .about-img .owner_informatiom h2 {
     font-size: 12px;
     font-family: "Open Sans", serif;
     text-align: center;
     font-weight: 500;
-    line-height:15px ;
+    line-height: 15px;
     color: #ffffff;
 }
+
 .about .about-img .owner_informatiom h3 {
     font-size: 22px;
     font-family: "Open Sans", serif;
     text-align: center;
     font-weight: 600;
-    line-height:26px ;
+    line-height: 26px;
     color: #ffffff;
 }
+
 /* about images section start */
 
 /* about images section end */
@@ -1064,7 +1069,7 @@ header nav .contact {
     /* width: 300px; */
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-
+    height: 364px;
     /* Prevents content from overflowing rounded corners */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     /* Smooth transitions */
@@ -1273,7 +1278,7 @@ header nav .contact {
     margin: 0;
     font-size: 16px;
     line-height: 20px;
-   
+
 }
 
 .feature .feature-img {
@@ -1733,41 +1738,53 @@ header nav .contact {
     left: -15px;
     right: -15px;
 }
+
 .blog-item.modern {
     margin: 0 10px;
-    border-radius: 8px; /* Bordi arrotondati */
-    overflow: hidden; /* Nasconde l'immagine se sporge */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leggera ombra */
-    background-color: #fff; /* Sfondo bianco */
+    border-radius: 8px;
+    /* Bordi arrotondati */
+    overflow: hidden;
+    /* Nasconde l'immagine se sporge */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Leggera ombra */
+    background-color: #fff;
+    /* Sfondo bianco */
     padding: 20px;
-    margin-bottom: 20px; /* Spazio tra gli elementi */
-    transition: transform 0.2s; /* Effetto di hover */
+    margin-bottom: 20px;
+    /* Spazio tra gli elementi */
+    transition: transform 0.2s;
+    /* Effetto di hover */
 }
 
 .blog-item.modern:hover {
-    transform: translateY(-5px); /* Solleva leggermente al passaggio del mouse */
+    transform: translateY(-5px);
+    /* Solleva leggermente al passaggio del mouse */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .blog-item.modern img {
     width: 100%;
     height: auto;
-    display: block; /* Evita spazi indesiderati sotto l'immagine */
+    display: block;
+    /* Evita spazi indesiderati sotto l'immagine */
     margin-bottom: 15px;
 }
 
-.blog-item.modern .blog-content { /* Contenitore per il testo */
+.blog-item.modern .blog-content {
+    /* Contenitore per il testo */
     padding: 0 10px;
 }
 
 .blog-item.modern h3 {
     margin-bottom: 10px;
-    color: #333; /* Colore del titolo */
+    color: #333;
+    /* Colore del titolo */
 }
 
 .blog-item.modern .meta {
     display: flex;
-    justify-content: space-between; /* Distribuisce gli elementi meta */
+    justify-content: space-between;
+    /* Distribuisce gli elementi meta */
     margin-bottom: 15px;
     color: #777;
     font-size: 14px;
@@ -1785,7 +1802,8 @@ header nav .contact {
 .blog-item.modern .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff; /* Colore del bottone */
+    background-color: #007bff;
+    /* Colore del bottone */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -2264,37 +2282,47 @@ header nav .contact {
 .newsletter .section-header h2::after {
     border-color: #ffffff;
 }
-.form-container { /* Contenitore per centrare il form */
+
+.form-container {
+    /* Contenitore per centrare il form */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100px; /* Altezza minima per centrare verticalmente */
+    min-height: 100px;
+    /* Altezza minima per centrare verticalmente */
 }
 
 .form {
     display: flex;
-    background-color: #fff; /* Sfondo bianco per il form */
+    background-color: #fff;
+    /* Sfondo bianco per il form */
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px; /* Larghezza massima del form */
-    width: 100%; /* Il form si adatta al contenitore */
+    max-width: 400px;
+    /* Larghezza massima del form */
+    width: 100%;
+    /* Il form si adatta al contenitore */
 }
 
 .form-control {
-    flex-grow: 1; /* L'input occupa lo spazio disponibile */
+    flex-grow: 1;
+    /* L'input occupa lo spazio disponibile */
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin-right: 10px;
     font-size: 16px;
-    outline: none; /* Rimuove il bordo blu al focus */
+    outline: none;
+    /* Rimuove il bordo blu al focus */
     transition: border-color 0.3s;
 }
 
 .form-control:focus {
-    border-color: #679b5f; /* Bordo verde al focus */
-    box-shadow: 0 0 5px rgba(103, 155, 95, 0.2); /* Leggera ombra verde al focus */
+    border-color: #679b5f;
+    /* Bordo verde al focus */
+    box-shadow: 0 0 5px rgba(103, 155, 95, 0.2);
+    /* Leggera ombra verde al focus */
 }
 
 .btn {
@@ -2309,7 +2337,8 @@ header nav .contact {
 }
 
 .btn:hover {
-    background-color: #55804e; /* Verde leggermente più scuro all'hover */
+    background-color: #55804e;
+    /* Verde leggermente più scuro all'hover */
 }
 
 
@@ -2341,8 +2370,8 @@ header nav .contact {
     font-weight: 600;
     /* color: #aa9166; */
     background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .footer .footer-link a {
@@ -2351,13 +2380,15 @@ header nav .contact {
     color: #06b000;
     transition: .3s;
 }
-.footer .footer-link p{
+
+.footer .footer-link p {
     font-size: 15px;
     color: #ffffff;
     line-height: 18px;
-   font-weight: 500;
-   margin-bottom: 10px;
+    font-weight: 500;
+    margin-bottom: 10px;
 }
+
 .footer .footer-link a::before {
     position: relative;
     content: "\f105";
@@ -2375,33 +2406,55 @@ header nav .contact {
     width: 25px;
 }
 
-.footer .footer-social {
-    position: relative;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    width: 100%;
+/* Social Media Icons */
+.footer-social {
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 20px;
 }
 
-.footer .footer-social a {
-    display: inline-block;
+.footer-social a {
+    margin: 0 10px;
+    /* Spacing between the icons */
+    font-size: 24px;
+    /* Icon size */
+    color: white;
+    /* White color for icons */
+    text-decoration: none;
+    /* Remove underline */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Smooth color change and hover effect */
 }
 
-.footer .footer-social a i {
-    margin-right: 15px;
-    font-size: 18px;
-    color: #aa9166;
+/* Hover effect for social media icons */
+.footer-social a:hover {
+    color: #1da1f2;
+    /* Example: Twitter blue color on hover */
+    transform: scale(1.1);
+    /* Slight zoom effect */
 }
 
-.footer .footer-social a:last-child i {
-    margin: 0;
+/* Hover colors for other social media platforms */
+.footer-social a:hover:nth-child(2) {
+    color: #1877f2;
+    /* Facebook color */
 }
 
-.footer .footer-social a:hover i {
-    color: #999999;
+.footer-social a:hover:nth-child(3) {
+    color: #ff0000;
+    /* YouTube red color */
+}
+
+.footer-social a:hover:nth-child(4) {
+    color: #e4405f;
+    /* Instagram pink color */
+}
+
+.footer-social a:hover:nth-child(5) {
+    color: #0077b5;
+    /* LinkedIn blue color */
 }
 
 .footer .footer-menu .f-menu {
@@ -2461,4 +2514,78 @@ header nav .contact {
         margin: 5px 0;
         text-align: center;
     }
+}
+
+/* Container for all the buttons */
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    /* Ensure it's on top of other elements */
+}
+
+/* Common styles for all buttons */
+.button {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-color: #25D366;
+    /* WhatsApp green color */
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    /* Make the button round */
+    font-size: 24px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Change background color on hover */
+.button:hover {
+    background-color: #128C7E;
+    /* Darker WhatsApp color */
+    transform: scale(1.1);
+    /* Slight zoom effect */
+    color: white;
+}
+
+/* Specific styles for the call button */
+.call-btn {
+    background-color: #34b7f1;
+    /* Call blue color */
+}
+
+.call-btn:hover {
+    background-color: #007b8f;
+    color: white;
+    /* Darker blue on hover */
+}
+
+/* Specific styles for the WhatsApp button */
+.whatsapp-btn {
+    background-color: #25D366;
+    /* WhatsApp green color */
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    color: white;
+    /* Darker green on hover */
+}
+
+/* Back to top button */
+.back-to-top-btn {
+    background-color: #007bff;
+    /* Blue color for back to top */
+}
+
+.back-to-top-btn:hover {
+    background-color: #0056b3;
+    color: white;
+    /* Darker blue on hover */
 }
