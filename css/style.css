@@ -264,6 +264,7 @@ header {
     left: 0;
     z-index: 99;
     transition: all 0.5s ease-in;
+    padding-bottom: 0px;
 }
 
 header .topbar {
@@ -295,7 +296,7 @@ header .topbar h2 {
 }
 
 header .border_line {
-    height: 3px;
+    height: 1px;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -319,7 +320,7 @@ header nav {
 }
 
 header nav .logo img {
-    width: 80px;
+    width: 50px;
 }
 
 header nav ul {
@@ -339,8 +340,8 @@ header nav ul {
 
 header nav ul li a {
     font-family: "Open Sans", serif;
-    font-weight: 600;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 13px;
     display: block;
     background: #CFAF10;
     background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%);
@@ -400,12 +401,12 @@ header nav ul li .active::after {
 }
 
 header nav .contact {
-    padding: 10px;
+    padding: 6px;
     border-radius: 5px;
     background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%);
     font-family: "Open Sans", serif;
-    font-size: 17px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
     color: #000000;
     text-transform: capitalize;
     border: 2px solid #ffffff;
@@ -451,8 +452,7 @@ header nav .contact {
 .menu_bar_area label {
     display: block;
     cursor: pointer;
-    height: 100px;
-    width: 100px;
+    width: 60px;
 }
 
 .menu_bar_area .menu--1 label,
@@ -2127,7 +2127,8 @@ header nav .contact {
 /********* Contact CSS *********/
 /*******************************/
 /* Contact Info Section */
-.contact-info, .contact-form {
+.contact-info,
+.contact-form {
     padding: 30px;
     background-color: #f8f9fa;
     border-radius: 10px;
