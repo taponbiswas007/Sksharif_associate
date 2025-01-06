@@ -11,7 +11,8 @@
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600;1,700;1,800&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
-        
+        <!-- aos animation -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <!-- CSS Libraries -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -24,74 +25,9 @@
 
     <body>
         <div class="wrapper">
-            <!-- Top Bar Start -->
-            <div class="top-bar">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <h1>SKSA</h1>
-                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-9">
-                            <div class="top-bar-right">
-                                <div class="text">
-                                    <h2>8:00 - 9:00</h2>
-                                    <p>Opening Hour Mon - Fri</p>
-                                </div>
-                                <div class="text">
-                                    <h2>+123 456 7890</h2>
-                                    <p>Call Us For Free Consultation</p>
-                                </div>
-                                <div class="social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Top Bar End -->
+           
 
-            <!-- Nav Bar Start -->
-            <div class="nav-bar">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-                        <a href="#" class="navbar-brand">MENU</a>
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto">
-                                <a href="index.html" class="nav-item nav-link">Home</a>
-                                <a href="about.html" class="nav-item nav-link">About</a>
-                                <a href="service.html" class="nav-item nav-link">Practice</a>
-                                <a href="team.html" class="nav-item nav-link">Attorneys</a>
-                                <a href="portfolio.html" class="nav-item nav-link">Case Studies</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                    <div class="dropdown-menu">
-                                        <a href="blog.html" class="dropdown-item">Blog Page</a>
-                                        <a href="single.html" class="dropdown-item">Single Page</a>
-                                    </div>
-                                </div>
-                                <a href="contact.html" class="nav-item nav-link active">Contact</a>
-                            </div>
-                            <div class="ml-auto">
-                                <a class="btn" href="">Get Appointment</a>
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <!-- Nav Bar End -->
+          
             
             
             <!-- Page Header Start -->
@@ -124,21 +60,24 @@
                                     <i class="fa fa-map-marker-alt"></i>
                                     <div class="contact-text">
                                         <h2>Location</h2>
-                                        <p>123 Street, New York, USA</p>
+                                        <p>3rd Floor Room No - 412</p>
+                                        <p>Supreme Court BAR Association Main Building</p>
+                                        <p>Dhaka - 1100</p>
                                     </div>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fa fa-phone-alt"></i>
                                     <div class="contact-text">
                                         <h2>Phone</h2>
-                                        <p>+012 345 67890</p>
+                                        <p>+8801710884561</p>
+                                       
                                     </div>
                                 </div>
                                 <div class="contact-item">
                                     <i class="fa fa-envelope"></i>
                                     <div class="contact-text">
                                         <h2>Email</h2>
-                                        <p>info@example.com</p>
+                                        <p>sksharifnassociates2002@gmail.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -146,21 +85,11 @@
                         <div class="col-md-6">
                             <div class="contact-form">
                                 <form>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Your Name" required="required" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Your Email" required="required" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject" required="required" />
-                                    </div>
-                                    <div class="form-group">
-                                        <textarea class="form-control" placeholder="Message" required="required" ></textarea>
-                                    </div>
-                                    <div>
-                                        <button class="btn" type="submit">Send Message</button>
-                                    </div>
+                                    <input type="text" class="form-control" placeholder="Your Name" required="required">
+                                    <input type="email" class="form-control" placeholder="Your Email" required="required">
+                                    <input type="text" class="form-control" placeholder="Subject" required="required">
+                                    <textarea class="form-control" placeholder="Message" required="required"></textarea>
+                                    <button type="submit">Send Message</button>
                                 </form>
                             </div>
                         </div>
@@ -268,6 +197,10 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
         <script src="lib/easing/easing.min.js"></script>
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
         <script src="lib/isotope/isotope.pkgd.min.js"></script>
 
         <!-- Template Javascript -->
