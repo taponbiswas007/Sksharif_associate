@@ -582,6 +582,12 @@ header nav .contact {
     }
 }
 
+@media (max-width: 577px) {
+    header {
+        top: -150px;
+    }
+}
+
 @media (max-width:488px) {
     header .topbar h1 {
         line-height: 41px;
@@ -592,7 +598,7 @@ header nav .contact {
     }
 
     header {
-        top: -135px;
+        top: -118px;
     }
 }
 
