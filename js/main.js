@@ -43,7 +43,22 @@
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
     });
-
+    // banner carosol
+    $('.banner-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+       
+        items: 1,                // Show 1 item per slide
+        autoplay: true,          // Enable auto-sliding
+        autoplayTimeout: 2000,   // Set the interval to 2 seconds (2000 milliseconds)
+        autoplayHoverPause: true, // Pause the autoplay when the mouse hovers over the carousel
+        navText: [
+            '<i class="fa fa-chevron-left"></i>',  // Left arrow icon (Font Awesome)
+            '<i class="fa fa-chevron-right"></i>'  // Right arrow icon (Font Awesome)
+        ]
+    });
+    
 
     // Testimonials carousel
     $(".testimonials-carousel").owlCarousel({
