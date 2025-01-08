@@ -701,7 +701,7 @@ header nav .contact {
 
 .banner_area .inner .video_items {
     height: 100vh;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .banner_area .inner::after {
@@ -1519,6 +1519,10 @@ header nav .contact {
     position: relative;
     /* For overlay effect */
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
     /* Ensures the overlay stays within the image bounds */
 }
 
@@ -1527,6 +1531,9 @@ header nav .contact {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
 }
 
 .team-item:hover .team-img img {
