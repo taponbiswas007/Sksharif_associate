@@ -1,6 +1,13 @@
 (function ($) {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 100) {
+            $('.header_area').addClass('sticky');
+        } else {
+            $('.header_area').removeClass('sticky');
+        }
+    });
     "use strict";
-    
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -10,11 +17,11 @@
         }
     });
     $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
         return false;
     });
-    
-    
+
+
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 90) {
@@ -25,8 +32,8 @@
             $('.carousel, .page-header').css("margin-top", "0");
         }
     });
-    
-    
+
+
     // Dropdown on mouse hover
     $(document).ready(function () {
         function toggleNavbarMethod() {
@@ -48,7 +55,7 @@
         loop: true,
         margin: 10,
         nav: true,
-       
+
         items: 1,                // Show 1 item per slide
         autoplay: true,          // Enable auto-sliding
         autoplayTimeout: 2000,   // Set the interval to 2 seconds (2000 milliseconds)
@@ -58,7 +65,7 @@
             '<i class="fa fa-chevron-right"></i>'  // Right arrow icon (Font Awesome)
         ]
     });
-    
+
 
     // Testimonials carousel
     $(".testimonials-carousel").owlCarousel({
@@ -66,44 +73,44 @@
         dots: true,
         loop: true,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            576:{
-                items:1
+            576: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             },
-            992:{
-                items:3
+            992: {
+                items: 3
             }
         }
     });
-    
-    
+
+
     // Blogs carousel
     $(".blog-carousel").owlCarousel({
         autoplay: true,
         dots: true,
         loop: true,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            576:{
-                items:1
+            576: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             },
-            992:{
-                items:3
+            992: {
+                items: 3
             }
         }
     });
-    
-    
+
+
     // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
@@ -114,9 +121,9 @@
         $("#portfolio-flters li").removeClass('filter-active');
         $(this).addClass('filter-active');
 
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
+        portfolioIsotope.isotope({ filter: $(this).data('filter') });
     });
-    
+
 })(jQuery);
 // toggle menu style
 Array.from(document.getElementsByTagName('path')).map(path => {
@@ -124,28 +131,28 @@ Array.from(document.getElementsByTagName('path')).map(path => {
     const debugPath = path.cloneNode();
     debugPath.classList.add('line--debug');
     if (path.parentNode) path.parentNode.insertBefore(debugPath.cloneNode(), path);
-  });
-  
-  const debugCheckbox = document.getElementById('debug');
-  debugCheckbox.addEventListener('change', () => {
+});
+
+const debugCheckbox = document.getElementById('debug');
+debugCheckbox.addEventListener('change', () => {
     const navElement = document.querySelector('.navDeactive'); // Select the .navDeactive element
     if (debugCheckbox.checked) {
-      navElement.classList.add('navActive'); // Add 'navActive' when checked
+        navElement.classList.add('navActive'); // Add 'navActive' when checked
     } else {
-      navElement.classList.remove('navActive'); // Remove 'navActive' when unchecked
+        navElement.classList.remove('navActive'); // Remove 'navActive' when unchecked
     }
-  });
-  
-  let currentActive = 0;
-  const checkboxes = document.querySelectorAll('.grid input');
-  const autoShow = setInterval(() => {
+});
+
+let currentActive = 0;
+const checkboxes = document.querySelectorAll('.grid input');
+const autoShow = setInterval(() => {
     checkboxes[currentActive % checkboxes.length].checked = !checkboxes[currentActive % checkboxes.length].checked;
     if (!checkboxes[currentActive % checkboxes.length].checked) currentActive += 1;
-  }, 1000);
-  
-  document.querySelector('.grid').addEventListener('click', () => {
+}, 1000);
+
+document.querySelector('.grid').addEventListener('click', () => {
     clearInterval(autoShow);
-  });
- 
-  
+});
+
+
 

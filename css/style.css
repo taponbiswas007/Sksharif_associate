@@ -257,15 +257,18 @@ body {
 }
 
 header {
-    background: #000000;
+
     padding: 10px 0;
-    position: sticky;
-    top: -100px;
+    position: fixed;
+    top: 0;
     left: 0;
+    width: 100%;
     z-index: 99;
     transition: all 0.5s ease-in;
     padding-bottom: 0px;
 }
+
+
 
 header .topbar {
     padding-bottom: 7px;
@@ -319,6 +322,27 @@ header nav {
     padding: 5px 0;
 }
 
+header nav .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+}
+
+header nav .logo h1 {
+    background: #CFAF10;
+    background: url(https://media0.giphy.com/media/326QjeElLLa5VkhAeg/200.webp?cid=790b7611wtewon6sm83pg23fh7ki9itzxtc6eny4fvak3vkt&ep=v1_gifs_search&rid=200.webp&ct=g);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-position: center;
+    font-weight: 900;
+    font-size: 26px;
+    text-align: center;
+    font-family: "Open Sans", serif;
+
+
+}
+
 header nav .logo img {
     width: 50px;
 }
@@ -341,15 +365,20 @@ header nav ul {
 header nav ul li a {
     font-family: "Open Sans", serif;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 15px;
     display: block;
-    background: #CFAF10;
+    /* background: #CFAF10;
     background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; */
     position: relative;
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
+    color: #ffffff;
+}
+
+header nav ul li a:hover {
+    color: #ffffff;
 }
 
 header nav ul li a:hover::after {
@@ -359,10 +388,34 @@ header nav ul li a:hover::after {
     left: 0;
     width: 100%;
     height: 3px;
-    background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%);
+    /* background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%); */
+    background: #ffffff;
     content: "";
     -webkit-animation: navlinkline ease 0.5s;
     animation: navlinkline ease 0.5s;
+}
+
+.sticky {
+    /* background: rgba(0, 0, 0, 0.8); */
+    background: #ffffff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.sticky nav ul li a {
+    color: #00072D !important;
+}
+
+.sticky nav ul li .active::after {
+    background: #00072D !important;
+
+}
+
+.sticky nav ul li a:hover::after {
+    background: #00072D !important;
+}
+
+.sticky nav ul li a:hover {
+    color: #00072D !important;
 }
 
 @-webkit-keyframes navlinkline {
@@ -396,18 +449,21 @@ header nav ul li .active::after {
     left: 0;
     width: 100%;
     height: 3px;
-    background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%);
+    /* background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%); */
+    background: #ffffff;
     content: "";
 }
 
 header nav .contact {
     padding: 6px;
     border-radius: 5px;
-    background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%);
+    /* background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%); */
+    background: #00072D;
+
     font-family: "Open Sans", serif;
     font-size: 14px;
     font-weight: 500;
-    color: #000000;
+    color: #ffffff;
     text-transform: capitalize;
     border: 2px solid #ffffff;
 }
@@ -416,9 +472,9 @@ header nav .contact {
     header .navDeactive ul {
         position: absolute;
         top: 100%;
-        left: -100%;
+        left: -200%;
         width: 100%;
-        background: #000000;
+        background: #00000061;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -427,6 +483,15 @@ header nav .contact {
         padding: 20px;
         -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease;
+    }
+
+    .sticky .navDeactive ul {
+        background: #ffffff;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .sticky .menu_bar_area path {
+        stroke: #00072D !important;
     }
 
     header .navDeactive ul a {
@@ -583,9 +648,9 @@ header nav .contact {
 }
 
 @media (max-width: 577px) {
-    header {
+    /* header {
         top: -150px;
-    }
+    } */
 }
 
 @media (max-width:488px) {
@@ -593,19 +658,26 @@ header nav .contact {
         line-height: 41px;
     }
 
-    header .topbar h2 {
-        margin-top: 0;
+    header nav .logo h1 {
+        font-size: 22px;
     }
 
-    header {
+    /* header {
         top: -118px;
+    } */
+}
+
+@media (max-width:420px) {
+
+    header nav .logo h1 {
+        font-size: 18px;
     }
 }
 
-@media (max-width:405px) {
+@media (max-width:376px) {
 
-    header {
-        top: -150px;
+    header nav .logo h1 {
+        font-size: 14px;
     }
 }
 
@@ -614,16 +686,22 @@ header nav .contact {
 /*******************************/
 .banner_area {
     width: 100%;
-
+    /* 
     background: url(../img/banner.jpeg), no-repeat;
     background-size: cover;
-  background-position: center;
+    background-position: center; */
+    height: 100vh;
 }
 
 .banner_area .inner {
     /* width: 100%;
     height: 100%; */
     /* position: relative; */
+}
+
+.banner_area .inner .video_items {
+    height: 100vh;
+    object-fit: cover;
 }
 
 .banner_area .inner::after {
@@ -636,10 +714,12 @@ header nav .contact {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
-.banner_content{
+
+.banner_content {
     position: relative;
     z-index: 2;
 }
+
 .banner_area .inner .bannerImg {
     /* position: absolute;
     top: 0;
@@ -690,28 +770,33 @@ header nav .contact {
 }
 
 
-.banner_area .inner .banner_content .items{
+.banner_area .inner .banner_content .items {
     padding: 150px 0;
 }
 
-  .owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev{
+.owl-carousel .owl-dot,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-nav .owl-prev {
     color: #ffffff;
-    
-  }
-  .owl-carousel .owl-nav .owl-next{
+
+}
+
+.owl-carousel .owl-nav .owl-next {
     right: 20px;
     top: 50%;
     position: absolute;
     transform: translateY(-50%);
 
-  }
-  .owl-carousel .owl-nav .owl-prev{
+}
+
+.owl-carousel .owl-nav .owl-prev {
     left: 20px;
     top: 50%;
     position: absolute;
     transform: translateY(-50%);
 
-  }
+}
+
 .banner_area .inner .banner_content .owner_img img {
     width: 100%;
     border-radius: 20px;
@@ -1089,7 +1174,7 @@ header nav .contact {
 /*******************************/
 .card {
     /* background: linear-gradient(to bottom right, #1a2a6c, #b21f1f, #fdbb2d);  */
-   
+
     background-color: #ffffff;
     /* width: 300px; */
     border-radius: 10px;
@@ -1115,7 +1200,7 @@ header nav .contact {
 
 .card-icon i {
     font-size: 4em;
-   
+
     /* White icon for contrast */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease;
@@ -1134,15 +1219,17 @@ header nav .contact {
     color: #eee;
     position: relative;
 }
-.card-content img{
+
+.card-content img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     width: 200px;
     height: 200px;
     opacity: .3;
 }
+
 .card-title {
     text-align: center;
     font-weight: 600;
