@@ -1,4 +1,14 @@
 (function ($) {
+    $(window).on('load', function() {
+        $('.preloader').addClass('loaded'); // Add loaded class
+        setTimeout(function() {
+            $('.preloader').addClass('fade-out');
+            setTimeout(function() {
+                $('.preloader').remove();
+                $('body').css('overflow', 'auto');
+            }, 1000);
+        }, 1000); // Delay before fade-out
+    });
     $(window).scroll(function () {
         if ($(window).scrollTop() > 100) {
             $('.header_area').addClass('sticky');

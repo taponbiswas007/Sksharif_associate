@@ -2723,3 +2723,59 @@ header nav .contact {
     color: white;
     /* Darker blue on hover */
 }
+
+/* pre loader */
+
+
+.preloader {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8f9fa; /* Light background */
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.preloader_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preloader_main img {
+    width: 250px;
+    height: auto;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0.8); /* Initially smaller */
+    transition: opacity 1s ease-in, transform 1s ease-out; /* Smooth transitions */
+}
+
+.preloader.loaded .preloader_main img { /* Target image when preloader is "loaded" */
+    opacity: 1;
+    transform: scale(1);
+}
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #bf04cd; /* Blue */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
