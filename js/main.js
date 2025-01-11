@@ -1,4 +1,5 @@
 (function ($) {
+   
     $(window).on('load', function() {
         $('.preloader').addClass('loaded'); // Add loaded class
         setTimeout(function() {
@@ -166,3 +167,24 @@ document.querySelector('.grid').addEventListener('click', () => {
 
 
 
+$(document).ready(function() {
+    var $slider = $('.logo-slider');
+    var $slides = $slider.children('.logo-slide');
+    var slideCount = $slides.length;
+    var slideWidth = $slides.width();
+    var totalWidth = slideWidth * slideCount;
+  
+    $slider.width(totalWidth * 2); // Raddoppia la larghezza per il loop infinito
+    $slider.append($slides.clone()); // Clona gli elementi
+  
+    function animateSlider() {
+      $slider.animate({
+        left: '-=' + totalWidth
+      }, 15000, 'linear', function() { // Anima lo scorrimento
+        $slider.css('left', 0); // Riporta lo slider all'inizio
+        animateSlider(); // Richiama la funzione per il loop continuo
+      });
+    }
+  
+    animateSlider();
+  });
