@@ -381,18 +381,22 @@ header nav ul li a:hover {
     color: #ffffff;
 }
 
-header nav ul li a:hover::after {
+header nav ul li a::after {
+
+    content: "";
     position: absolute;
     bottom: -7px;
-    border-radius: 2px;
     left: 0;
-    width: 100%;
+    width: 0%; /* Initially 0 width */
     height: 3px;
-    /* background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%); */
+    border-radius: 2px;
     background: #ffffff;
-    content: "";
-    -webkit-animation: navlinkline ease 0.5s;
-    animation: navlinkline ease 0.5s;
+    transition: width 0.5s ease; /* Smooth transition for width */
+}
+header nav ul li a:hover::after {
+ 
+    width: 100%;
+  
 }
 
 .sticky {
@@ -410,33 +414,20 @@ header nav ul li a:hover::after {
 
 }
 
+.sticky nav ul li a::after {
+    background: #00072D !important;
+    transition: width 0.5s ease;
+}
 .sticky nav ul li a:hover::after {
     background: #00072D !important;
+    
 }
 
 .sticky nav ul li a:hover {
     color: #00072D !important;
 }
 
-@-webkit-keyframes navlinkline {
-    0% {
-        width: 0;
-    }
 
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes navlinkline {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 100%;
-    }
-}
 
 header nav ul li .active {
     position: relative;
@@ -1031,6 +1022,7 @@ header nav .contact {
     -webkit-text-fill-color: transparent;
     margin: 0;
     font-size: 18px;
+    line-height: 26px;
 }
 
 
@@ -1604,7 +1596,48 @@ header nav .contact {
     object-fit: fill;
 
 }
+.contact-card {
+    background-color: white; /* White background for the card */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    max-width: 600px; /* Set a maximum width */
+    width: 100%;
+}
 
+.contact-card h2 {
+    margin-bottom: 20px;
+    color: #333; /* Darker heading color */
+}
+.form-group{
+    margin-bottom: 10px;
+}
+.form-group label {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 10px;
+}
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
 @media(max-width: 767.98px) {
     .faqs .faqs-img {
         margin-bottom: 30px;
