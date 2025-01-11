@@ -1,10 +1,10 @@
 (function ($) {
-   
-    $(window).on('load', function() {
+
+    $(window).on('load', function () {
         $('.preloader').addClass('loaded'); // Add loaded class
-        setTimeout(function() {
+        setTimeout(function () {
             $('.preloader').addClass('fade-out');
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.preloader').remove();
                 $('body').css('overflow', 'auto');
             }, 1000);
@@ -80,24 +80,16 @@
 
     // Testimonials carousel
     $(".testimonials-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            576: {
-                items: 1
-            },
-            768: {
-                items: 2
-            },
-            992: {
-                items: 3
-            }
-        }
+        autoplay: true,            // Enable autoplay
+        autoplayTimeout: 3000,     // Set the autoplay interval (in milliseconds)
+        autoplayHoverPause: true,  // Pause autoplay on hover
+        ltr: true,                 // Enable right-to-left direction
+        dots: false,                // Enable dots navigation
+        loop: true,                // Enable infinite loop
+        smartSpeed: 1000,          // Smooth sliding speed (in milliseconds)
+
     });
+
 
 
     // Blogs carousel
@@ -167,24 +159,25 @@ document.querySelector('.grid').addEventListener('click', () => {
 
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     var $slider = $('.logo-slider');
     var $slides = $slider.children('.logo-slide');
     var slideCount = $slides.length;
     var slideWidth = $slides.width();
     var totalWidth = slideWidth * slideCount;
-  
+
     $slider.width(totalWidth * 2); // Raddoppia la larghezza per il loop infinito
     $slider.append($slides.clone()); // Clona gli elementi
-  
+
     function animateSlider() {
-      $slider.animate({
-        left: '-=' + totalWidth
-      }, 15000, 'linear', function() { // Anima lo scorrimento
-        $slider.css('left', 0); // Riporta lo slider all'inizio
-        animateSlider(); // Richiama la funzione per il loop continuo
-      });
+        $slider.animate({
+            left: '-=' + totalWidth
+        }, 15000, 'linear', function () { // Anima lo scorrimento
+            $slider.css('left', 0); // Riporta lo slider all'inizio
+            animateSlider(); // Richiama la funzione per il loop continuo
+        });
     }
-  
+
     animateSlider();
-  });
+});
+

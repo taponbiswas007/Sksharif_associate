@@ -35,7 +35,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -108,45 +109,46 @@
         <div class="banner_area">
             <div class="inner">
                 <video class=" video_items w-100 "  src="https://videos.pexels.com/video-files/5636977/5636977-sd_640_360_24fps.mp4" autoplay loop muted playsinline></video>
-               
-                <!-- <div class="banner_content">
-                    <div class="owl-carousel banner-carousel">
-                        <div class="items">
+                <div class="items bannerItems ">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          
+                          
+                          <div class="swiper-slide">
                             <h1 >
                                 Justice for All, Expertise You Can Trust
                             </h1>
                             <h2 >
                                 Defending your rights with unmatched dedication and experience.
                             </h2>
-                        </div>
-                        <div class="items">
+                          </div>
+                          <div class="swiper-slide">
                             <h1>Criminal Defense</h1>
                             <h2>Protecting your freedom with experienced criminal defense attorneys.</h2>
-                        </div>
-                        
-                        <div class="items">
+                          </div>
+                          <div class="swiper-slide">
                             <h1>Family Law</h1>
-                            <h2>Providing compassionate and professional support for family matters.</h2>
-                        </div>
-                        
-                        <div class="items">
+                    <h2>Providing compassionate and professional support for family matters.</h2>
+                          </div>
+                          <div class="swiper-slide">
                             <h1>Personal Injury</h1>
                             <h2>Fighting for the compensation you deserve after an accident or injury.</h2>
-                        </div>
-                        
-                        <div class="items">
+                          </div>
+                          <div class="swiper-slide">
                             <h1>Business Law</h1>
-                            <h2>Expert legal counsel to help your business grow and succeed.</h2>
-                        </div>
-                        
-                        <div class="items">
+                    <h2>Expert legal counsel to help your business grow and succeed.</h2>
+                          </div>
+                          <div class="swiper-slide">
                             <h1>Immigration Services</h1>
                             <h2>Helping you navigate complex immigration processes with confidence.</h2>
+                          </div>
                         </div>
-                      
-
-                    </div>
-                </div> -->
+                       
+                      </div>
+                   
+                </div>
+               
+             
             </div>
         </div>
         <!-- ==========Banner area end=========== -->
@@ -196,7 +198,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-md-6">
                         <div data-aos="fade-right" data-aos-duration="1500" class="about-img">
-                            <img src="img/owner.jpg" alt="Image">
+                            <img src="img/owner-removebg.png" alt="Image">
                             <div class="owner_informatiom">
                                 <h1>SK. Shariful Islam (Sharif)</h1>
                                 <h2>LL.B (Hon's), LL.M(I.U)</h2>
@@ -228,7 +230,7 @@
 
 
         <!-- Service Start -->
-        <div class="service">
+        <div class="service ">
             <div class="container">
                 <div class="section-header">
                     <h2>Our Practices Areas</h2>
@@ -289,11 +291,16 @@
                             <div class="card-icon">
                                 <i class="fa fa-graduation-cap"></i>
                             </div>
+                            <h2 class="card-title">Education Law</h2>
                             <div class="card-content">
-                                <h2 class="card-title">Education Law</h2>
+                                <img src="img/logo.png" alt="">
+                               <div class="position-relative z-1">
+                            
                                 <p class="card-description">Shaping the educational landscape, covering student rights, school governance, funding, and ensuring equal access to quality education.</p>
-                                <!-- <a href="#" class="card-button">Learn More</a> -->
+                                
+                               </div>
                             </div>
+                          
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
@@ -301,12 +308,17 @@
                             <div class="card-icon">
                                 <i class="fa fa-gavel"></i>
                             </div>
+                            <h2 class="card-title">Criminal Law</h2>
                             <div class="card-content">
-                                <h2 class="card-title">Criminal Law</h2>
+                                <img src="img/logo.png" alt="">
+                               <div class="position-relative z-1">
+                            
                                 <p class="card-description">Addressing offenses against society, defining crimes, establishing punishments, and ensuring public safety through the justice system.
                                 </p>
-                                <!-- <a href="#" class="card-button">Learn More</a> -->
+                                
+                               </div>
                             </div>
+                          
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
@@ -314,11 +326,16 @@
                             <div class="card-icon">
                                 <i class="fa fa-globe"></i>
                             </div>
+                            <h2 class="card-title">Cyber Law</h2>
                             <div class="card-content">
-                                <h2 class="card-title">Cyber Law</h2>
+                                <img src="img/logo.png" alt="">
+                               <div class="position-relative z-1">
+                            
                                 <p class="card-description">Navigating the legal complexities of the digital world, addressing online crimes, data privacy, intellectual property, and internet governance.</p>
-                                <!-- <a href="#" class="card-button">Learn More</a> -->
+                                
+                               </div>
                             </div>
+                          
                         </div>
                     </div>
 
@@ -461,10 +478,10 @@
                     <div class="col-xl-6 col-lg-6 col-md-6">
                         <div class="team-item" data-aos="zoom-in" data-aos-duration="1500">
                             <div class="team-img">
-                                <img src="img/adv_nilmadhab_roy.png" alt="Team Image">
+                                <img src="img/adv_nilmadhab_roy1.png" alt="Team Image">
                             </div>
                             <div class="team-text">
-                                <h2>Adv. Sree Nilmadhab Roy</h2>
+                                <h2>ADV. Sree Nilmadhab Roy</h2>
                                 <p>Head of Associate</p>
                                 <p>Arthorin Suit And N I Act Case</p>
                                
@@ -480,10 +497,10 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="team-item" data-aos="zoom-in" data-aos-duration="1500">
                             <div class="team-img">
-                                <img src="img/meraj_molla.png" alt="Team Image">
+                                <img src="img/meraj_molla1.png" alt="Team Image">
                             </div>
                             <div class="team-text">
-                                <h2>Meraj Molla</h2>
+                                <h2>ADV. Meraj Molla</h2>
                                 <p>Senior Associate</p>
                                 <div class="team-social">
                                     <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
@@ -497,10 +514,10 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="team-item" data-aos="zoom-in" data-aos-duration="1500">
                             <div class="team-img">
-                                <img src="img/md_zakariya.png" alt="Team Image">
+                                <img src="img/md_zakariya1.png" alt="Team Image">
                             </div>
                             <div class="team-text">
-                                <h2>MD. Zakaria</h2>
+                                <h2>ADV. MD. Zakaria</h2>
                                  <p>Senior Associate</p>
                                 <div class="team-social">
                                     <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
@@ -514,10 +531,10 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="team-item" data-aos="zoom-in" data-aos-duration="1500">
                             <div class="team-img">
-                                <img src="img/md_zakirhossain.png" alt="Team Image">
+                                <img src="img/md_zakirhossain1.png" alt="Team Image">
                             </div>
                             <div class="team-text">
-                                <h2>MD. JAHIDUL ISLAM SUMON</h2>
+                                <h2>ADV. MD. JAHIDUL ISLAM SUMON</h2>
                                 <p>Senior Associate</p>
                                 <div class="team-social">
                                     <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
@@ -1075,6 +1092,23 @@
 
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+     <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      effect: "slide",
+      autoplay: {
+        delay: 5000, // Delay in milliseconds (5000ms = 5 seconds)
+        disableOnInteraction: false // Keep autoplay running even after user interaction
+      },
+      
+      loop: true,
+     
+    });
+  </script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -1095,6 +1129,7 @@
             }, 3000)
     
         });
+        
     </script>
      
     
