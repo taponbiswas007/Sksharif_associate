@@ -634,7 +634,8 @@
                                 <div class="col-md-6">
                                     <div class="contact-card">
                                         <h2>Ask Me Anything</h2>
-                                        <form id="contactForm">
+                                        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                                            <input type="hidden" name="access_key" value="69fd97b5-4251-4b30-855d-f512666037fc">
                                             <div class="form-group">
                                                 <label for="name">Name:</label>
                                                 <input type="text" class="form-control" id="name" name="name" required>
@@ -649,8 +650,9 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="question">Your Question:</label>
-                                                <textarea class="form-control" id="question" name="question" rows="5" required></textarea>
+                                                <textarea class="form-control" id="question" name="message" rows="5" required></textarea>
                                             </div>
+                                            <input type="hidden" name="redirect" value="https://web3forms.com/success">
                                             <button type="submit" class="btn btn-primary btn-block">Submit</button>
                                             <div id="formMessage" class="mt-3"></div>
                                         </form>
