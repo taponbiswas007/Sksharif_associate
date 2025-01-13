@@ -1586,6 +1586,17 @@ header nav .contact {
 .contact-card h2 {
     margin-bottom: 20px;
     color: #333;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    /* Darker heading color */
+}
+.contact-card p {
+    margin-bottom: 20px;
+    color: #888888;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
     /* Darker heading color */
 }
 
