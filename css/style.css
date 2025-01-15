@@ -732,8 +732,8 @@ header nav .contact {
 
 .banner_area .inner .items h2 {
     color: #ffffff;
-    font-size: clamp(1.5rem , 4vw , 4rem);
-  
+    font-size: clamp(1.5rem, 4vw, 4rem);
+
     text-align: center;
     animation: subbannertitle 1s ease;
     font-weight: 700;
@@ -781,16 +781,33 @@ header nav .contact {
     margin-bottom: 45px;
     padding: 90px 0;
     text-align: center;
-    background: #68aa66;
+    /* background: #68aa66; */
+    background: url(https://scba.org.bd/assets/img/team/1.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.page-header::after {
+    content: '';
+    background: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    filter: blur(3px);
 }
 
 .page-header h2 {
     position: relative;
-    color: #121518;
+    color: #ffffff;
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 20px;
     padding-bottom: 5px;
+    z-index: 2;
 }
 
 .page-header h2::after {
@@ -800,14 +817,16 @@ header nav .contact {
     height: 2px;
     left: calc(50% - 50px);
     bottom: 0;
-    background: #121518;
+    z-index: 2;
+    background: #ffffff;
 }
 
 .page-header a {
     position: relative;
     padding: 0 12px;
     font-size: 22px;
-    color: #121518;
+    color: #ffffff;
+    z-index: 2;
 }
 
 .page-header a:hover {
@@ -823,6 +842,7 @@ header nav .contact {
     right: -7px;
     text-align: center;
     color: #121518;
+    z-index: 2;
 }
 
 .page-header a:last-child::after {
@@ -1591,6 +1611,7 @@ header nav .contact {
     text-align: center;
     /* Darker heading color */
 }
+
 .contact-card p {
     margin-bottom: 20px;
     color: #888888;
@@ -2070,93 +2091,101 @@ header nav .contact {
 /********* Timeline CSS ********/
 /*******************************/
 .timeline-start {
-    position: relative; /* Necessario per posizionare la linea verticale */
+    position: relative;
+    /* Necessario per posizionare la linea verticale */
 
     padding: 20px;
-  }
-  
-  .timeline-start::after {
+}
+
+.timeline-start::after {
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #ddd; /* Colore della linea verticale */
+    background-color: #ddd;
+    /* Colore della linea verticale */
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -3px; /* Centra perfettamente la linea */
-    z-index: -1; /* Mette la linea dietro i contenuti */
-  }
-  
-  .timeline-container {
+    margin-left: -3px;
+    /* Centra perfettamente la linea */
+    z-index: -1;
+    /* Mette la linea dietro i contenuti */
+}
+
+.timeline-container {
     padding: 10px 40px;
     position: relative;
     background-color: inherit;
     width: 50%;
-  }
-  
-  .left {
+}
+
+.left {
     left: 0;
-  }
-  
-  .right {
+}
+
+.right {
     left: 50%;
-  }
-  
-  .timeline-container::after {
+}
+
+.timeline-container::after {
     content: '';
     position: absolute;
     width: 25px;
     height: 25px;
     right: -17px;
     background-color: white;
-    border: 4px solid #ddd; /* Bordo del cerchio */
+    border: 4px solid #ddd;
+    /* Bordo del cerchio */
     top: 15px;
     border-radius: 50%;
     z-index: 1;
-  }
-  
-  .left::after {
+}
+
+.left::after {
     left: -16px;
-  }
-  
-  .timeline-content {
+}
+
+.timeline-content {
     padding: 20px 30px;
     background-color: white;
     position: relative;
     border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra */
-  }
-  
-  .timeline-content h2 {
-      color: #333; /* Colore del titolo */
-  }
-  
-  .timeline-content span {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Aggiunge un'ombra */
+}
+
+.timeline-content h2 {
+    color: #333;
+    /* Colore del titolo */
+}
+
+.timeline-content span {
     font-weight: bold;
-    color: #007bff; /* Colore dell'anno (blu) */
+    color: #007bff;
+    /* Colore dell'anno (blu) */
     margin-right: 10px;
-  }
-  
-  /* Stili responsive per schermi più piccoli */
-  @media screen and (max-width: 767px) {
+}
+
+/* Stili responsive per schermi più piccoli */
+@media screen and (max-width: 767px) {
     .timeline::after {
-      left: 3px;
+        left: 3px;
     }
-  
+
     .timeline-container {
-      width: 100%;
-      padding-left: 70px;
-      padding-right: 25px;
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
     }
-  
+
     .timeline-container::after {
-      left: 10px;
+        left: 10px;
     }
-  
+
     .right {
-      left: 0%;
+        left: 0%;
     }
-  }
+}
 
 
 /*******************************/
@@ -2500,7 +2529,7 @@ header nav .contact {
     margin-bottom: 30px;
     font-size: 25px;
     font-weight: 600;
-   
+
     background: repeating-linear-gradient(to top, #CFAF10 0%, #FF3D5D 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -2550,50 +2579,50 @@ header nav .contact {
 
 .footer-social a {
     margin: 0 10px;
-   
+
     font-size: 24px;
-   
+
     color: white;
-  
+
     text-decoration: none;
-   
+
     transition: color 0.3s ease, transform 0.3s ease;
-   
+
 }
 
 
 .footer-social a:hover {
     color: #1da1f2;
-    
+
     transform: scale(1.1);
- 
+
 }
 
 
 .footer-social a:hover:nth-child(2) {
     color: #1877f2;
-   
+
 }
 
 .footer-social a:hover:nth-child(3) {
     color: #ff0000;
-   
+
 }
 
 .footer-social a:hover:nth-child(4) {
     color: #e4405f;
-    
+
 }
 
 .footer-social a:hover:nth-child(5) {
     color: #0077b5;
-   
+
 }
 
 .footer .footer-menu .f-menu {
     position: relative;
     padding: 15px 0;
-   border-top: 1px solid #666;
+    border-top: 1px solid #666;
     font-size: 0;
     text-align: center;
 }
