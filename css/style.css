@@ -2870,7 +2870,7 @@ header nav .contact {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 20px;
-    font-family: 'Playfair Display', serif;
+    font-family: "Open Sans", serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add text shadow for depth */
     animation: fadeInDown 1s ease-out;
   }
